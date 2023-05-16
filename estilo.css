@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    position: relative;
+    display: inline-block;
+    color: rgba(255, 255, 255, .4);
+    border-radius: 0%;
+}
+    
+
+.logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 18px;
+    background-color: #ab226d;
+    position: relative;
+    animation: mover  2s 0s reverse ease both running;
+
+}
+
+.logo .maiorq{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%) rotate(45deg);
+}
+.logo .maiorq::after,
+.logo .maiorq::before{
+    content: "";
+    width: 30px;
+    height: 8px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.logo .maiorq::before{
+    width: 8px;
+    height: 30px;
+    left: initial;
+    right: 0;
+}
+.logo .underline{
+    width: 25px;
+    height: 7px;
+    background-color: white;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+}
+
+.btn{  
+    border:4px solid transparent;
+    position: relative;
+    text-decoration:underline;
+    color: rgb(171, 33, 109);
+    font-family: 'opaen_sansregular';
+    transition:0.4s;
+    text-shadow: 0 0 0.125em rgb(171, 33, 109), 0 0 0.25em currentColor;
+    animation: btn 3s ease 3s alternate-reverse 1 forwards running;
+
+}
+
+.btn::hover{
+    color: transparent;
+    text-shadow: transparent;
+    text-decoration-color: transparent;
+}
+  
+
+
+
+@keyframes mover {
+   100%  { 
+        background-color: #ab226d;
+        margin-left: 100%;
+        border-radius: 18px;
+        width:100px;
+        height:100px;
+      } 
+      0% {
+         background-color: #ab226d;
+        margin-left: 0;
+        width:100px;
+        height:100px;
+      }
+
+
+      }
